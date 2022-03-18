@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1975222103324568774}
   - component: {fileID: 5317025781680227156}
   - component: {fileID: 7019159387350799907}
+  - component: {fileID: 5451537576271404480}
   m_Layer: 6
   m_Name: Ball
   m_TagString: Ball
@@ -148,7 +149,20 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7019159387350799907}
+        m_TargetAssemblyTypeName: Normal.Realtime.RealtimeComponent`1[[Normal.Realtime.RealtimeTransformModel,
+          Normcore
+        m_MethodName: RequestOwnership
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -272,3 +286,17 @@ MonoBehaviour:
   _syncScale: 1
   _syncVelocity: 1
   _maintainOwnershipWhileSleeping: 0
+--- !u!114 &5451537576271404480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975222103324568775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cf7c1bfd8e8f4e429effc07d23db8a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rtTrandsform: {fileID: 7019159387350799907}
+  _xrGrab: {fileID: 1975222103324568774}
