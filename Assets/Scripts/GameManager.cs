@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
 
     private void AvatarCreated(RealtimeAvatarManager avatarManager, RealtimeAvatar avatar, bool isLocalAvatar)
     {
-        if (_avatarManager.avatars.Count ==1)
+        if (_avatarManager.avatars.Count ==2)
         {
             roomStart.StartCountdown();
             
