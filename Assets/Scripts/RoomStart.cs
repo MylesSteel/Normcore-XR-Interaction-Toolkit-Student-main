@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using Normal.Realtime;
 
-public class RoomStart : MonoBehaviour
+
+public class RoomStart : RealtimeComponent<RoomStartModel>
 {
     [SerializeField] private Text _countdown;
     [SerializeField] private float countdownDuration;
@@ -13,19 +15,20 @@ public class RoomStart : MonoBehaviour
     {
         get
         {
+            // return 0 if model not set
+            if (model == null) return 0f;
+            //make sure time is running 
+            if (model.startTime == 0f) return 0f;
             // Calculate how much time has passed
-            return (float)(countdownDuration -= Time.deltaTime) ;
+            return (float)(model.startTime - realtime.room.time); 
+           // return (float)(countdownDuration -= Time.deltaTime) ;
         }
-    }
-
-    private void Start()
-    {
-        StartCountdown();
     }
 
 
     public void StartCountdown()
     {
+        model.startTime = realtime.room.time + countdownDuration; 
         StartCoroutine(UpdateTime());
     }
     IEnumerator UpdateTime()

@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6605651344018574062, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
+      propertyPath: scoreboardScript
+      value: 
+      objectReference: {fileID: 641387210}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
 --- !u!1 &134269028
@@ -345,6 +349,7 @@ GameObject:
   - component: {fileID: 265403094}
   - component: {fileID: 265403093}
   - component: {fileID: 265403098}
+  - component: {fileID: 265403099}
   m_Layer: 5
   m_Name: Game Start Timer
   m_TagString: Untagged
@@ -461,6 +466,29 @@ MonoBehaviour:
   _countdown: {fileID: 1968969836}
   countdownDuration: 5
   gameManager: {fileID: 1458222044}
+--- !u!114 &265403099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265403092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -363599832, guid: c424820a8880b8845bda10ec0b41507e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _realtime: {fileID: 235750330}
+  _sceneViewUUID: 
+  _viewUUID: 6d60d961-ed70-4d38-885f-0f9a099eb180
+  _sceneViewPreventOwnershipTakeover: 0
+  _sceneViewDestroyWhenOwnerOrLastClientLeaves: 1
+  _sceneViewDestroyWhenOwnerOrLastClientLeavesMigrated: 0
+  _sceneViewDestroyWhenLastClientLeaves: 1
+  _components:
+  - componentID: 1
+    component: {fileID: 265403098}
+  _childViews: []
 --- !u!1 &286127706
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,6 +889,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6605651344018574062, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
+      propertyPath: scoreboardScript
+      value: 
+      objectReference: {fileID: 641387210}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
 --- !u!1 &641387208
@@ -1884,6 +1916,8 @@ MonoBehaviour:
   _realtime: {fileID: 235750330}
   _ball: {fileID: 1975222103324568775, guid: 2c6d39562b6beeb4293411c58e6b5c8e, type: 3}
   _spawnPoint: {fileID: 228684547}
+  roomStart: {fileID: 265403098}
+  conMove: {fileID: 654757313}
 --- !u!1 &1586369200
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2562,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6605651344018574062, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
       propertyPath: _scoreboard
+      value: 
+      objectReference: {fileID: 641387210}
+    - target: {fileID: 6605651344018574062, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
+      propertyPath: scoreboardScript
       value: 
       objectReference: {fileID: 641387210}
     m_RemovedComponents: []
@@ -3255,5 +3293,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 6605651344018574062, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}
+      propertyPath: scoreboardScript
+      value: 
+      objectReference: {fileID: 641387210}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b45031d8d51d574cba2325a86bda522, type: 3}

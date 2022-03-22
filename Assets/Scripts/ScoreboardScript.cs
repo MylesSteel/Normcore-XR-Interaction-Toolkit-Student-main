@@ -18,6 +18,7 @@ public class ScoreboardScript : RealtimeComponent<ScoreboardModel>
     public void SetScore(uint playerId)
     {
         model.players[playerId].score++;
+        SetScoreboardText();
     }
     private void AddPlayer(uint PlayerId)
     {
@@ -47,7 +48,7 @@ public class ScoreboardScript : RealtimeComponent<ScoreboardModel>
         foreach(var item in model.players)
         {
             uint ID = item.Key + 1;
-            temp += "Player " + ID + "; " + GetScore(item.Key) + "/n";
+            temp += "Player " + ID + "; " + GetScore(item.Key) + "\n";
         }
         model.scoreBoardText = temp;
     }

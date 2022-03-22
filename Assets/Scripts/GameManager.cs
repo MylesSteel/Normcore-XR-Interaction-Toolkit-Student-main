@@ -11,20 +11,27 @@ public class GameManager : MonoBehaviour
     public Realtime _realtime;
     public GameObject _ball;
     public Transform _spawnPoint;
+    public RoomStart roomStart;
+    public ActionBasedContinuousMoveProvider conMove;
     void Awake()
     {
         _avatarManager.avatarCreated += AvatarCreated;
     }
     public void StartGame()
     {
-        
+        conMove.enabled = true;
+        if (_realtime.clientID == 0)
+        {
+            SpawnBalls();
+        }
     }
 
     private void AvatarCreated(RealtimeAvatarManager avatarManager, RealtimeAvatar avatar, bool isLocalAvatar)
     {
-        if (_avatarManager.avatars.Count == 1)
+        if (_avatarManager.avatars.Count ==1)
         {
-            SpawnBalls();
+            roomStart.StartCountdown();
+            
         }
     }
     void SpawnBalls()
